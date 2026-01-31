@@ -36,6 +36,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Expo prebuild (android)
+        env:
+          EXPO_PUBLIC_ANDROID_GOOGLE_SERVICES_FILE: ./ci/google-services.ci.json
         run: npx expo prebuild --platform android --clean --no-install
 
       - name: Build debug APK
