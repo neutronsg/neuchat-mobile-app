@@ -76,14 +76,16 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     plugins: [
       'expo-font',
       ['react-native-permissions', { iosPermissions: ['Camera', 'PhotoLibrary', 'MediaLibrary'] }],
-      [
-        '@sentry/react-native/expo',
-        {
-          url: 'https://sentry.io/',
-          project: process.env.EXPO_PUBLIC_SENTRY_PROJECT_NAME,
-          organization: process.env.EXPO_PUBLIC_SENTRY_ORG_NAME,
-        },
-      ],
+      process.env.SENTRY_AUTH_TOKEN && process.env.EXPO_PUBLIC_SENTRY_PROJECT_NAME && process.env.EXPO_PUBLIC_SENTRY_ORG_NAME
+        ? [
+          '@sentry/react-native/expo',
+          {
+            url: 'https://sentry.io/',
+            project: process.env.EXPO_PUBLIC_SENTRY_PROJECT_NAME,
+            organization: process.env.EXPO_PUBLIC_SENTRY_ORG_NAME,
+          },
+        ]
+        : null,
       '@react-native-firebase/app',
       '@react-native-firebase/messaging',
       [
@@ -100,7 +102,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
         },
       ],
       './with-ffmpeg-pod.js',
-    ],
+    ].filter(Boolean) as ExpoConfig['plugins'],
     androidNavigationBar: { backgroundColor: '#ffffff' },
   };
 };
