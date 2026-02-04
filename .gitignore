@@ -39,3 +39,7 @@ android/
 
 .env.local
 .env.*.local
+
+build-*.ipa
+build-*.apk
+build-*.aab
