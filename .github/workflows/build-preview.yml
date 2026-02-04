@@ -31,7 +31,7 @@ env:
 jobs:
   build-ios:
     if: ${{ inputs.build-ios }}
-    runs-on: macos-latest
+    runs-on: neutron-mac
     timeout-minutes: 90
 
     steps:
@@ -41,12 +41,12 @@ jobs:
       - name: 🏗 Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 9
+          version: 10.28.2
 
       - name: 🏗 Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: pnpm
 
       - name: 🏗 Setup Expo
@@ -156,12 +156,12 @@ jobs:
       - name: 🏗 Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 9
+          version: 10.28.2
 
       - name: 🏗 Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: "pnpm"
 
       - name: 🏗 Setup Expo
