@@ -188,6 +188,13 @@
       "brace-expansion": "^2.0.2",
       "js-yaml": "^4.1.1",
       "storybook": "8.6.15"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@sentry/cli",
+      "esbuild",
+      "hyochan-welcome",
+      "protobufjs",
+      "unrs-resolver"
+    ]
   }
 }
