@@ -8,14 +8,25 @@
       "developmentClient": true,
       "distribution": "internal"
     },
+    "preview": {
+      "autoIncrement": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "distribution": "store"
     }
   },
   "submit": {
     "production": {
       "android": {
-        "track": "internal" // (enum: production, beta, alpha, internal)
+        "track": "internal"
+      },
+      "ios": {
+        "appleTeamId": "55A3GBQNPH"
       }
     }
   }

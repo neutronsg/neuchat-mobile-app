@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872761433828",
+    "project_id": "neuchat-7e8fc",
+    "storage_bucket": "neuchat-7e8fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872761433828:android:e4604c9976795e66e0d6f1",
+        "android_client_info": {
+          "package_name": "sg.neutron.neuchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxc8l4FtA60P1CBgE1V1KfvM8aSvoH-Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
